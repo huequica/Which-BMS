@@ -10,10 +10,16 @@
     "@types/node": "^12.12.25",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
+    "axios": "^0.19.2",
+    "concurrently": "^5.0.2",
+    "electron": "^7.1.10",
+    "electron-is-dev": "^1.1.0",
+    "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "wait-on": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -35,5 +41,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.17.0",
+    "@typescript-eslint/parser": "^2.17.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.18.0"
+  },
+  "homepage" : "."
 }
