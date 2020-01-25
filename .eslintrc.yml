@@ -1,0 +1,55 @@
+env:
+  browser: true
+  commonjs: true
+  es6: true
+extends:
+  - 'eslint:recommended'
+  - 'plugin:react/recommended'
+  - 'plugin:@typescript-eslint/eslint-recommended'
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+  process: readonly
+  __dirname: readonly
+parser: '@typescript-eslint/parser'
+parserOptions:
+  sourceType: module
+  ecmaFeatures:
+    jsx: true
+    modules: true
+  ecmaVersion: 2018
+plugins:
+  - react
+  - '@typescript-eslint'
+rules: 
+  # `var`を使ったら怒るよ
+  no-var: error
+  
+  # セミコロン抜かないで
+  semi: error
+  
+  # カンマのあとはスペースを入れてくれ
+  comma-spacing: error
+
+  # 式代入の前後はスペース入れてね
+  react/jsx-curly-spacing: 
+    - error
+    - when: always
+      children: true
+
+  # インデントは2で守ってね
+  indent:
+    - error
+    - 2
+  
+  # ブロック演算子はスペース入れてね
+  block-spacing: error
+
+  # 演算子の前後のスペースは絶対抜かないで
+  space-infix-ops: error
+
+  # アロー演算子前後のスペース強制
+  arrow-spacing: error
+
+  # タブとスペースを混ぜないで
+  no-mixed-spaces-and-tabs: error
