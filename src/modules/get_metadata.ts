@@ -6,7 +6,7 @@ import axios from "axios";
  * @return bool 
  */
 const check_urlformat = (url: string): Boolean => {
-  const url_pattern: RegExp = /^(https|http):\/\/(.html|.htm)/;
+  const url_pattern: RegExp = /^(https|http):\/\/.*(.html|.htm)$/;
   const result = url_pattern.test(url);
   if(result){
     return true;
