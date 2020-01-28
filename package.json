@@ -66,7 +66,7 @@
       }
     },
     "testMatch": [
-      "**/tests/**/*.test.js"
+      "**/tests/**/*.test.ts"
     ],
     "moduleNameMapper": {
       "^#/(.+)": "<rootDir>/src/$1"
