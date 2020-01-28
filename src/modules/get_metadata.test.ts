@@ -1,11 +1,11 @@
-import get_Metadata from "./get_metadata"; 
+import get_MetaData from "./get_metadata"; 
 
 test('hogehoge => undefined', (): void => {
-  expect(get_Metadata('hoge')).resolves.toBeUndefined();
+  expect(get_MetaData('hoge')).resolves.toBeUndefined();
 });
 
 test('https://lite.stellabms.xyz/table.html => string', (): void => {
-  get_Metadata('https://lite.stellabms.xyz/table.html').then((response: string) => {
+  get_MetaData('https://lite.stellabms.xyz/table.html').then((response: string) => {
     expect(typeof response).toBe('string');
   });
 });
