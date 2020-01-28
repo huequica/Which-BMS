@@ -1,6 +1,22 @@
 import axios from "axios";
 
 /**
+ * check thrown url format is right
+ * @param url url to dificulty table
+ * @return bool 
+ */
+const check_urlformat = (url: string): Boolean => {
+  const url_pattern: RegExp = /^(https|http):\/\/(.html|.htm)/;
+  const result = url_pattern.test(url);
+  if(result){
+    return true;
+  }
+  else{
+    return false;
+  }
+};
+
+/**
  * Getting Header JSON from Dificulty Table Page
  * 
  * @author huequica
@@ -8,6 +24,9 @@ import axios from "axios";
  */
 const get_MetaData: Function = async (endpoint: string): Promise<string | null | undefined> => {
   try{
+    if(check_urlformat(endpoint) === false){
+      return undefined;
+    }
     // Get html document from url
     const result = await axios({
       method: 'GET',
