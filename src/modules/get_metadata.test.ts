@@ -5,5 +5,7 @@ test('hogehoge => undefined', (): void => {
 });
 
 test('https://lite.stellabms.xyz/table.html => string', (): void => {
-  expect(get_Metadata('https://lite.stellabms.xyz/table.html')).resolves.toBeDefined();
+  get_Metadata('https://lite.stellabms.xyz/table.html').then((response: string) => {
+    expect(typeof response).toBe('string');
+  });
 });
