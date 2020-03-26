@@ -2,7 +2,7 @@ import React from 'react';
 import FCC_API from './modules/FCC_API';
 
 const App: React.FC = () => {
-  FCC_API.getMetaLink('http://rattoto10.jounin.jp/table.html').then((res : string) => {
+  FCC_API.getHead('http://rattoto10.jounin.jp/header.json').then((res : string) => {
     console.log(res);
   });
 
