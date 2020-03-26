@@ -1,5 +1,4 @@
 import axios from 'axios';
-// import * as API_RESPONSE from './@types/api/API_RESPONSE';
 
 export default class FCC_API{
   private static API_Endpoints = {
@@ -19,5 +18,15 @@ export default class FCC_API{
 
     return result.data.URL;  
   };
-  
+
+  static getHead : Function = async(endpoint: string): Promise<Object | undefined> => {
+    const result = await axios({
+      method: 'GET',
+      url: `${FCC_API.API_Endpoints['dev']}/head`,
+      params: {
+        endpoint: endpoint
+      }
+    });
+    return result.data;
+  };
 }
