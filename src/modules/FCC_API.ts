@@ -1,17 +1,17 @@
 import axios from 'axios';
-// import * as API_RESPONSE from './@types/api/API_RESPONSE';
+import { HeaderJSON } from '../@types/BMSTable/tableFormat';
 
 export default class FCC_API{
-  
+  private static API_Endpoints = {
+    dev: 'http://localhost:5001/which-bms/us-central1',
+    prod: ''
+  };
+
   static getMetaLink : Function = async(endpoint: string): Promise<string | undefined> => {
-    const API_Endpoints = {
-      dev: 'http://localhost:5001/which-bms/us-central1',
-      prod: ''
-    };
 
     const result = await axios({
       method: 'GET',
-      url: `${API_Endpoints['dev']}/metalink`,
+      url: `${FCC_API.API_Endpoints['dev']}/metalink`,
       params: {
         endpoint: endpoint
       }
@@ -19,5 +19,26 @@ export default class FCC_API{
 
     return result.data.URL;  
   };
-  
+
+  static getHead : Function = async(endpoint: string): Promise<HeaderJSON | undefined> => {
+    const result = await axios({
+      method: 'GET',
+      url: `${FCC_API.API_Endpoints['dev']}/head`,
+      params: {
+        headLink: endpoint
+      }
+    });
+    return result.data;
+  };
+
+  static getData : Function = async (endpoint: string): Promise<object | undefined> => {
+    const result = await axios({
+      method: 'GET',
+      url: `${FCC_API.API_Endpoints['dev']}/data`,
+      params: {
+        dataLink: endpoint
+      }
+    });
+    return result.data;
+  }
 }
