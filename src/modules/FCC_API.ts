@@ -25,9 +25,10 @@ export default class FCC_API{
       method: 'GET',
       url: `${FCC_API.API_Endpoints['dev']}/head`,
       params: {
-        endpoint: endpoint
+        headLink: endpoint
       }
     });
     return result.data;
   };
+
 }
