@@ -31,4 +31,14 @@ export default class FCC_API{
     return result.data;
   };
 
+  static getData : Function = async (endpoint: string): Promise<object | undefined> => {
+    const result = await axios({
+      method: 'GET',
+      url: `${FCC_API.API_Endpoints['dev']}/data`,
+      params: {
+        dataLink: endpoint
+      }
+    });
+    return result.data;
+  }
 }
