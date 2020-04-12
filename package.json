@@ -1,0 +1,26 @@
+{
+  "name": "which_bms",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/which-bms/which-bms.git"
+  },
+  "author": "huequica",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/which-bms/which-bms/issues"
+  },
+  "homepage": "https://github.com/which-bms/which-bms#readme"
+}
