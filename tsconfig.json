@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2017",
     "module": "es2015",
     "sourceMap": true,
     "moduleResolution": "node",
@@ -9,7 +9,13 @@
     "lib": [
       "es2020",
       "DOM"
-    ]
+    ],
+
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "outDir": "dist",
+    "strict": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "src"
