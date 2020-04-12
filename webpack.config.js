@@ -3,7 +3,7 @@ const path = require('path');
 const srcDirectory = path.resolve(__dirname, 'src');
 const distDirectory = path.resolve(__dirname, 'dist');
 
-export default {
+module.exports = {
   mode: 'development',
   entry: `${srcDirectory}/index.tsx`,
 
